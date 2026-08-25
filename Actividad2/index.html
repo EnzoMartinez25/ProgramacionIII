@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Desarrollo de la actividad 2">
+    <meta name="author" content="Damian Enzo Martinez">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form id="Formulario">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre Completo</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej:Juan Perez" required
+            title="Minimo 15 caracteres"><br><br>
+
+            <label for="email">Correo Electronico:</label><br>
+            <input type="email" id="email" name="email" placeholder="Ej:alangusto@mail.com" required><br><br>
+
+            <label for="contraseña">Contraseña:</label><br>
+            <input type="password" id="contraseña" name="contraseña" placeholder="Minimo 8 caracteres" required><br><br>
+
+            <label for="telefono">Telefono:</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11-1234-5678"
+            title="Formato: 11-1234-5678"><br>
+
+            <p>Genero:</p>
+            <input type="radio" id="Masculino" name="Genero" required>
+            <label for="Masculino">Masculino</label>
+            
+            <input type="radio" id="Femenino" name="Genero" required>
+            <label for="Femenino">Femenino</label>
+
+            <input type="radio" id="Otro" name="Genero" required>
+            <label for="Otro">Otro</label><br><br>
+            
+            <fieldset>
+                <legend>Intereses:</legend>
+                <input type="checkbox" id="Futbol" name="Futbol">
+                <label for="Futbol">Futbol</label><br>
+
+                <input type="checkbox" id="Videojuegos" name="Videojuegos">
+                <label for="Videojuegos">Videojuegos</label><br>
+
+                <input type="checkbox" id="Musica" name="Musica">
+                <label for="Musica">Musica</label><br>
+
+                <input type="checkbox" id="Estudiar" name="Estudiar">
+                <label for="Estudiar">Estudiar</label>
+    
+                <p>Comentarios Adicionales</p>
+
+                <label for="mensaje">Escribi otro interes:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="40" required 
+                placeholder="Escriba su mensaje aqui..."></textarea>
+            </fieldset><br>
+            
+            <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="">Seleccioná un país</option>
+                    <option value="ar">Argentina</option>
+                    <option value="cl">Chile</option>
+                    <option value="uy">Uruguay</option>
+                </select>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
