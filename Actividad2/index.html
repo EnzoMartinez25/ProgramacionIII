@@ -3,72 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Desarrollo de la actividad 2">
+    <meta name="description" content="Primer desarrollo de la actividad 1">
     <meta name="author" content="Damian Enzo Martinez">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Actividad 2</title>
+    <title>Actividad 1</title>
 </head>
-
 <body>
-    <h1>Formulario</h1>
-    <form id="Formulario">
-        <fieldset>
-            <legend>Datos Personales</legend>
-            <label for="nombre">Nombre Completo</label><br>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej:Juan Perez" required
-            title="Minimo 15 caracteres"><br><br>
+    <h1>Desarrollo de la actividad 1</h1>
+    <h2>Etiquetas</h2>
+    <p>Esto es una pequeña introduccion a <strong>HTML</strong></p>
+    <P>Usando una gran variedad de <em>etiquetas</em>, como <em>enfasis</em>,<u>Subrayado</u>.<br>Y un salto de linea</P>
 
-            <label for="email">Correo Electronico:</label><br>
-            <input type="email" id="email" name="email" placeholder="Ej:alangusto@mail.com" required><br><br>
+    <h3>Tabla con datos de mi Familia</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Pais</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Enzo</td>
+                <td>Martinez</td>
+                <td>Argentina</td>
+            </tr>
+                <td>2</td>
+                <td>Milagros</td>
+                <td>Martinez</td>
+                <td>Argentina</td>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Datos de mi familia </td>
+            </tr>
+        </tfoot>
+    </table>    
 
-            <label for="contraseña">Contraseña:</label><br>
-            <input type="password" id="contraseña" name="contraseña" placeholder="Minimo 8 caracteres" required><br><br>
+        <h3>Imagen</h3>
+        <img src="./lenguajes.webp" width="400px" alt="Imagen de ejemplo">
+        <h3>Enlaces</h3>
+        <p>
+            <a href="https://google.com" target="_blank"> Ir a google(nueva pestaña)</a>
+        </p>
 
-            <label for="telefono">Telefono:</label><br>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11-1234-5678"
-            title="Formato: 11-1234-5678"><br>
-
-            <p>Genero:</p>
-            <input type="radio" id="Masculino" name="Genero" required>
-            <label for="Masculino">Masculino</label>
-            
-            <input type="radio" id="Femenino" name="Genero" required>
-            <label for="Femenino">Femenino</label>
-
-            <input type="radio" id="Otro" name="Genero" required>
-            <label for="Otro">Otro</label><br><br>
-            
-            <fieldset>
-                <legend>Intereses:</legend>
-                <input type="checkbox" id="Futbol" name="Futbol">
-                <label for="Futbol">Futbol</label><br>
-
-                <input type="checkbox" id="Videojuegos" name="Videojuegos">
-                <label for="Videojuegos">Videojuegos</label><br>
-
-                <input type="checkbox" id="Musica" name="Musica">
-                <label for="Musica">Musica</label><br>
-
-                <input type="checkbox" id="Estudiar" name="Estudiar">
-                <label for="Estudiar">Estudiar</label>
-    
-                <p>Comentarios Adicionales</p>
-
-                <label for="mensaje">Escribi otro interes:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="40" required 
-                placeholder="Escriba su mensaje aqui..."></textarea>
-            </fieldset><br>
-            
-            <label for="pais">País:</label>
-                <select id="pais" name="pais">
-                    <option value="">Seleccioná un país</option>
-                    <option value="ar">Argentina</option>
-                    <option value="cl">Chile</option>
-                    <option value="uy">Uruguay</option>
-                </select>
-        </fieldset>
-
-        <button type="submit">Enviar</button>
-    </form>
+        <footer>
+            <p>&copy;2026 Enzo Martinez</p>
+        </footer>
 </body>
+
 </html>
