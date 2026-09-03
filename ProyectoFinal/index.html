@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página web del restaurante La Buena Mesa">
+    <meta name="author" content="Damian Enzo Martinez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Buena Mesa</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>La Buena Mesa</h1>
+        <p>Cocina casera con el sabor de siempre</p>
+        <nav aria-label="Navegacion Principal">
+            <a href="#menu">Menu</a> |
+            <a href="#quienes-somos">Quienes somos</a> |
+            <a href="#ubicacion">Ubicacion</a> |
+            <a href="#reservas">Reservas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="menu">
+            <h2>Nuestro Menu</h2>
+            <p>Estos son algunos de nuestros <strong>platos destacados</strong>, preparados con <em>ingredientes frescos</em> del dia.</p>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Plato</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Milanesa a la napolitana</td>
+                        <td>Con papas fritas caseras</td>
+                        <td>$8500</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ravioles de ricota</td>
+                        <td>Con salsa a eleccion</td>
+                        <td>$7200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ensalada mediterranea</td>
+                        <td>Con aceitunas y queso feta</td>
+                        <td>$6000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Flan casero</td>
+                        <td>Con dulce de leche y crema</td>
+                        <td>$3500</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Precios sujetos a cambios sin previo aviso</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="quienes-somos">
+            <h2>Quienes somos</h2>
+            <article>
+                <p>
+                    <strong>La Buena Mesa</strong> nacio en 2010 como un pequeño emprendimiento familiar,
+                    con la idea de compartir <em>comida casera</em> hecha con mucho cariño.
+                </p>
+                <p>
+                    Con el paso de los años nos convertimos en un lugar de encuentro para
+                    familias y amigos, manteniendo siempre la misma esencia: <u>calidad y buen trato</u>.
+                </p>
+                <h3>Nuestros valores</h3>
+                <ul>
+                    <li>Ingredientes frescos y de cercania</li>
+                    <li>Atencion calida y personalizada</li>
+                    <li>Recetas tradicionales de la familia</li>
+                </ul>
+            </article>
+
+            <aside>
+                <p>"Un lugar que te hace sentir en casa." - Cliente frecuente</p>
+            </aside>
+        </section>
+
+        <section id="ubicacion">
+            <h2>Ubicacion</h2>
+            <p>Nos podes encontrar en el centro de la ciudad. Te esperamos!</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.6435!2d-68.8458!3d-32.8895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUzJzIyLjIiUyA2OMKwNTAnNDQuOSJX!5e0!3m2!1ses!2sar!4v1690000000000"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <section id="reservas">
+            <h2>Reserva tu mesa</h2>
+            <form id="formularioReserva">
+                <fieldset>
+                    <legend>Datos de la reserva</legend>
+
+                    <label for="nombre">Nombre completo</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Perez" required><br><br>
+
+                    <label for="email">Correo electronico</label><br>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan@mail.com" required><br><br>
+
+                    <label for="telefono">Telefono</label><br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 261-123-4567"><br><br>
+
+                    <label for="fecha">Fecha</label><br>
+                    <input type="date" id="fecha" name="fecha" required><br><br>
+
+                    <label for="comensales">Cantidad de comensales</label><br>
+                    <input type="number" id="comensales" name="comensales" min="1" max="20" required><br><br>
+
+                    <label for="mensaje">Comentarios adicionales</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Alguna aclaracion sobre tu reserva..."></textarea><br><br>
+
+                    <button type="submit">Reservar</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;2026 La Buena Mesa</p>
+    </footer>
+
+</body>
+
+</html>
