@@ -1,0 +1,123 @@
+/* VARIABLES CSS (Punto 6) */
+:root {
+  --color-fondo: #eaf6ff;
+  --color-texto: #1b3a4b;
+  --color-acento: #2196f3;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* 2. SELECTORES EN CSS */
+#parrafo-id {
+  color: red;
+  font-weight: bold;
+}
+
+.parrafo-clase {
+  color: green;
+  font-style: italic;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* 3. MODIFICACIÓN DE TEXTO */
+.titulo-sombra {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+
+.texto-espaciado {
+  line-height: 2.2;
+  letter-spacing: 3px;
+}
+
+blockquote {
+  font-style: italic;
+  font-family: "Georgia", serif;
+  border-left: 4px solid var(--color-acento);
+  padding-left: 15px;
+  color: #555;
+}
+
+/* 4. MODELO DE CAJA - TARJETA DE PERFIL */
+.tarjeta {
+  /* box-sizing controla cómo se calcula el ancho/alto total de la caja:
+     - content-box (por defecto): el width/height definido es SOLO el
+       contenido. El padding y el border se suman aparte, agrandando
+       la caja final más de lo esperado.
+     - border-box: el width/height definido YA incluye el padding y
+       el border. Es más predecible, por eso se usa mucho más. */
+  box-sizing: border-box;
+
+  width: 280px;
+  border: 2px solid var(--color-acento);
+  padding: 20px;
+  margin: 20px 0;
+  background-color: var(--color-fondo);
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  color: var(--color-texto);
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+/* 5. DISPLAY Y VISIBILITY */
+.tarjeta-mini {
+  width: 120px;
+  padding: 15px;
+  margin: 8px;
+  background-color: #b3d9ff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* display: block -> se apilan uno debajo del otro, cada uno ocupa toda la fila */
+.galeria-block .tarjeta-mini {
+  display: block;
+}
+
+/* display: inline -> se acomodan en línea pero PIERDEN width, height,
+   y margin/padding vertical (box model incompleto) */
+.galeria-inline .tarjeta-mini {
+  display: inline;
+}
+
+/* display: inline-block -> en línea, pero respetando el box model completo */
+.galeria-inline-block .tarjeta-mini {
+  display: inline-block;
+}
+
+.btn-none {
+  display: none; /* desaparece y deja de ocupar espacio */
+}
+
+.btn-hidden {
+  visibility: hidden; /* invisible pero sigue ocupando su espacio */
+}
+
+/* 6. VARIABLES CSS - TEMA DE COLORES */
+.tarjeta-variables {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border-color: var(--color-acento);
+}
+
+/* Para probar otro tema, cambiar los valores de :root, por ejemplo:
+:root {
+  --color-fondo: #2b2b2b;
+  --color-texto: #f5f5f5;
+  --color-acento: #ff9800;
+}
+*/

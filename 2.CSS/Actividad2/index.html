@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TP 1 - Introducción a CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Trabajo Práctico 1: Introducción a CSS</h1>
+
+  <!-- 1. INTRODUCCIÓN A CSS -->
+  <section>
+    <h2>1. Introducción a CSS</h2>
+    <p>
+      CSS (Cascading Style Sheets, u "Hojas de Estilo en Cascada") es el lenguaje que
+      usamos para darle estilo y presentación visual a una página HTML. Mientras que el
+      HTML se encarga de la estructura y el contenido, el CSS se encarga de cómo se ve
+      todo eso: colores, tamaños, tipografías, espaciados, ubicación de los elementos, etc.
+      Separar el contenido (HTML) del diseño (CSS) permite mantener el código más
+      ordenado y reutilizar los mismos estilos en varias páginas.
+    </p>
+  </section>
+
+  <!-- 2. SELECTORES EN CSS -->
+  <section>
+    <h2>2. Selectores en CSS</h2>
+    <p id="parrafo-id">Este párrafo tiene un selector por ID.</p>
+    <p class="parrafo-clase">Este párrafo tiene un selector por CLASS.</p>
+    <p>Este párrafo tiene un selector por TAG (aplica a todos los &lt;p&gt;).</p>
+  </section>
+
+  <!-- 3. MODIFICACIÓN DE TEXTO -->
+  <section>
+    <h2>3. Modificación de Texto</h2>
+
+    <h3 class="titulo-sombra">Título con sombra y mayúsculas</h3>
+
+    <p class="texto-espaciado">
+      Este párrafo tiene un line-height amplio (mucho espacio entre líneas) y un
+      letter-spacing grande (mucho espacio entre letras), para que se note bien el efecto
+      de ambas propiedades sobre la lectura del texto.
+    </p>
+
+    <blockquote>
+      "Esta es una cita en cursiva y con otra tipografía distinta al resto del texto."
+    </blockquote>
+  </section>
+
+  <!-- 4. MODELO DE CAJA - TARJETA DE PERFIL -->
+  <section>
+    <h2>4. Modelo de Caja</h2>
+
+    <div class="tarjeta">
+      <h3>Tarjeta de Perfil</h3>
+      <p>Esta tarjeta muestra border, padding, margin, background-color, border-radius y box-shadow.</p>
+    </div>
+  </section>
+
+  <!-- 5. DISPLAY Y VISIBILITY -->
+  <section>
+    <h2>5. Display y Visibility</h2>
+
+    <h3>Galería con display: block</h3>
+    <div class="galeria-block">
+      <div class="tarjeta-mini">Tarjeta 1</div>
+      <div class="tarjeta-mini">Tarjeta 2</div>
+      <div class="tarjeta-mini">Tarjeta 3</div>
+    </div>
+
+    <h3>Galería con display: inline</h3>
+    <div class="galeria-inline">
+      <div class="tarjeta-mini">Tarjeta 1</div>
+      <div class="tarjeta-mini">Tarjeta 2</div>
+      <div class="tarjeta-mini">Tarjeta 3</div>
+    </div>
+
+    <h3>Galería con display: inline-block</h3>
+    <div class="galeria-inline-block">
+      <div class="tarjeta-mini">Tarjeta 1</div>
+      <div class="tarjeta-mini">Tarjeta 2</div>
+      <div class="tarjeta-mini">Tarjeta 3</div>
+    </div>
+
+    <h3>Diferencia entre display: none y visibility: hidden</h3>
+    <button class="btn-none">Botón con display: none</button>
+    <button class="btn-hidden">Botón con visibility: hidden</button>
+    <p>
+      La diferencia es que <code>display: none</code> hace que el elemento desaparezca
+      por completo y deje de ocupar espacio, como si no existiera en la página (se saca
+      del flujo del documento). En cambio, <code>visibility: hidden</code> hace que el
+      elemento sea invisible, pero sigue ocupando su espacio en el layout, como si fuera
+      un "hueco vacío" donde debería estar.
+    </p>
+  </section>
+
+  <!-- 6. VARIABLES CSS -->
+  <section>
+    <h2>6. Variables CSS</h2>
+
+    <div class="tarjeta tarjeta-variables">
+      <h3>Tarjeta con Variables CSS</h3>
+      <p>El color de fondo, texto y borde se controlan con variables definidas en :root.</p>
+    </div>
+  </section>
+
+</body>
+</html>

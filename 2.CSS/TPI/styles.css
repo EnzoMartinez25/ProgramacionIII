@@ -1,0 +1,334 @@
+/* =========================================
+   RESET Y BÁSICOS (Bloque 1)
+========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* =========================================
+   VARIABLES CSS (Bloque 1)
+========================================= */
+:root {
+  --bg: #f8fafc;
+  --panel: #fff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-600: #1d4ed8;
+  --primary-700: #1e40af;
+  --accent: #16a34a;
+  --danger: #dc2626;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  --container: 1100px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+}
+
+/* Contenedor central: limita el ancho máximo y centra el contenido */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* =========================================
+   BLOQUE 2: HEADER RESPONSIVO
+========================================= */
+.site-header {
+  position: sticky; /* header pegado arriba al hacer scroll */
+  top: 0;
+  z-index: 100;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  position: relative;
+}
+
+/* Logo */
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.site-header__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Navegación (desktop: en línea) */
+.site-header__nav {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.site-header__nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.site-header__nav a:hover {
+  color: var(--primary);
+}
+
+/* El checkbox que controla el menú queda oculto siempre */
+.site-header__toggle-input {
+  display: none;
+}
+
+/* El botón hamburguesa (label) oculto en desktop, aparece en mobile */
+.site-header__toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--bg);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tamaño de los íconos SVG usados como <img> */
+.site-header__toggle-icon,
+.btn__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* =========================================
+   BLOQUE 3: SISTEMA DE BOTONES (BEM)
+========================================= */
+
+/* Clase base .btn */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+/* Variante: primario */
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--primary-600);
+}
+.btn--primary:active {
+  background: var(--primary-700);
+}
+
+/* Variante: secundario (neutro) */
+.btn--secondary {
+  background: var(--bg);
+  color: var(--text);
+  border-color: #e2e8f0;
+}
+.btn--secondary:hover {
+  background: #eef2f7;
+}
+
+/* Variante: outline (borde, fondo transparente) */
+.btn--outline {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn--outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Variante: peligro */
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+}
+.btn--danger:hover {
+  opacity: 0.85;
+}
+
+/* Estado deshabilitado */
+.btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn[disabled]:hover {
+  background: var(--bg); /* que no cambie de color al pasar el mouse */
+}
+
+/* Grupo de botones: contenedor Flex con separación consistente */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap; /* se acomodan en varias filas si no entran */
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* =========================================
+   BLOQUE 4: TARJETA DE PRODUCTO (BEM)
+========================================= */
+.product-card {
+  max-width: 320px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-top: var(--space-4);
+}
+
+.product-card__media {
+  position: relative;
+  background: var(--bg);
+}
+
+.product-card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* recorta la imagen manteniendo proporción, sin deformarla */
+  display: block;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: #f59e0b;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+}
+
+.product-card__info {
+  padding: var(--space-5);
+}
+
+.product-card__title {
+  font-size: 16px;
+  margin-bottom: var(--space-2);
+}
+
+.product-card__desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: var(--space-3);
+}
+
+.product-card__price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.product-card__old-price {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-left: var(--space-2);
+}
+
+/* =========================================
+   BLOQUE 6: SECCIONES DE RELLENO
+========================================= */
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.panel h2 {
+  margin-bottom: var(--space-2);
+}
+
+.code-note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE: TABLET Y MOBILE
+========================================= */
+
+/* Tablet: bajamos un poco los espacios */
+@media (max-width: 900px) {
+  .site-header__nav {
+    gap: var(--space-4);
+  }
+}
+
+/* Mobile: aparece el botón hamburguesa y se oculta el menú horizontal */
+@media (max-width: 640px) {
+  .site-header__toggle {
+    display: flex;
+  }
+
+  .site-header__nav {
+    display: none; /* oculto por defecto en mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  /* Truco clave: cuando el checkbox está tildado, mostramos el nav
+     que es su "hermano" en el HTML */
+  .site-header__toggle-input:checked ~ .site-header__nav {
+    display: flex;
+  }
+}

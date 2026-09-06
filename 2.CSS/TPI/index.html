@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiTienda - TP Integrador CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+  <!-- ===================================== -->
+  <!-- HEADER STICKY -->
+  <!-- ===================================== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+
+      <a href="#top" class="site-header__logo" aria-label="Inicio">
+        <span class="site-header__mark" aria-hidden="true">M</span>
+        <span>MiTienda</span>
+      </a>
+
+      <!-- Checkbox oculto: controla si el menú mobile está abierto o cerrado -->
+      <input type="checkbox" id="menu-toggle" class="site-header__toggle-input" />
+
+      <!-- Label que actúa de botón hamburguesa (apunta al checkbox de arriba) -->
+      <label for="menu-toggle" class="site-header__toggle" aria-label="Abrir menú">
+        <img src="icons/menu.svg" alt="" class="site-header__toggle-icon" />
+      </label>
+
+      <nav class="site-header__nav">
+        <a href="#novedades">Novedades</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ===================================== -->
+      <!-- BLOQUE 3: SISTEMA DE BOTONES -->
+      <!-- ===================================== -->
+      <section class="panel" id="botones">
+        <h2>1) Sistema de Botones</h2>
+        <p class="code-note">Base + variantes. Observá padding, radio, foco, hover/active. Usa Flex para el grupo.</p>
+
+        <div class="btn-group">
+          <button class="btn btn--primary">Primario</button>
+          <button class="btn btn--secondary">Secundario</button>
+          <button class="btn btn--outline">Outline</button>
+          <button class="btn btn--danger">Peligro</button>
+          <button class="btn btn--icon">
+            <img src="icons/search.svg" alt="" class="btn__icon" /> Con ícono
+          </button>
+          <button class="btn btn--secondary" disabled>Deshabilitado</button>
+        </div>
+      </section>
+
+      <!-- ===================================== -->
+      <!-- BLOQUE 4: TARJETA DE PRODUCTO -->
+      <!-- ===================================== -->
+      <section class="panel" id="producto">
+        <h2>2) Tarjeta de Producto</h2>
+
+        <article class="product-card">
+          <div class="product-card__media">
+            <span class="product-card__badge">Nuevo</span>
+            <!-- Guardá la imagen zapatillas.webp en la misma carpeta que este HTML -->
+            <img src="zapatillas.webp" alt="Zapatillas Runner Pro" class="product-card__img" />
+          </div>
+
+          <div class="product-card__info">
+            <h3 class="product-card__title">Zapatillas Runner Pro</h3>
+            <p class="product-card__desc">
+              Amortiguación ligera, malla respirable y suela antideslizante.
+              Perfectas para entrenar todos los días.
+            </p>
+            <p class="product-card__price">
+              $ 24.999
+              <span class="product-card__old-price">$ 29.999</span>
+            </p>
+
+            <div class="btn-group">
+              <button class="btn btn--primary">Comprar ahora</button>
+              <button class="btn btn--outline btn--icon">
+                <img src="icons/plus.svg" alt="" class="btn__icon" /> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===================================== -->
+      <!-- BLOQUE 6: SECCIONES DE RELLENO -->
+      <!-- ===================================== -->
+      <section class="panel" id="novedades">
+        <h2>Novedades</h2>
+        <p class="code-note">Sección de relleno para probar el menú.</p>
+      </section>
+
+      <section class="panel" id="ofertas">
+        <h2>Ofertas</h2>
+        <p class="code-note">Otra sección de relleno.</p>
+      </section>
+
+      <section class="panel" id="contacto">
+        <h2>Contacto</h2>
+        <p class="code-note">Más contenido de ejemplo.</p>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>
