@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio Web</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================================== -->
+  <!-- HEADER -->
+  <!-- ===================================== -->
+  <header class="header">
+    <div class="header__inner container">
+      <div class="header__logo">Mi sitio web</div>
+
+      <!-- Checkbox oculto para el menú hamburguesa en mobile -->
+      <input type="checkbox" id="menu-toggle" class="header__toggle-input" />
+      <label for="menu-toggle" class="header__toggle" aria-label="Abrir menú">
+        <span class="material-symbols-outlined">menu</span>
+      </label>
+
+      <nav class="header__nav">
+        <a href="#inicio">
+          <span class="material-symbols-outlined">home</span> Inicio
+        </a>
+        <a href="#sobre-nosotros">
+          <span class="material-symbols-outlined">group</span> Sobre nosotros
+        </a>
+        <a href="#servicios">
+          <span class="material-symbols-outlined">service_toolbox</span> Servicios
+        </a>
+        <a href="#contacto">
+          <span class="material-symbols-outlined">mail</span> Contacto
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ===================================== -->
+      <!-- BANNER / HERO -->
+      <!-- ===================================== -->
+      <section class="banner" id="inicio">
+        <h1 class="banner__title">Bienvenido a Nuestro Sitio Web</h1>
+        <p class="banner__subtitle">
+          Explora nuestros servicios y descubre cómo podemos ayudarte
+        </p>
+        <button class="btn-descubrir">Descubrir más</button>
+      </section>
+
+      <!-- ===================================== -->
+      <!-- CARACTERÍSTICAS -->
+      <!-- ===================================== -->
+      <section class="caracteristicas" id="servicios">
+        <h2 class="caracteristicas__titulo">Nuestras Características</h2>
+
+        <div class="caracteristicas__grid">
+          <article class="card">
+            <h3 class="card__titulo">Calidad</h3>
+            <p class="card__texto">Ofrecemos productos y servicios de la más alta calidad.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__titulo">Innovación</h3>
+            <p class="card__texto">Nos mantenemos a la vanguardia con las últimas tecnologías.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__titulo">Soporte</h3>
+            <p class="card__texto">Estamos aquí para ayudarte en todo momento.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__titulo">Sostenibilidad</h3>
+            <p class="card__texto">Comprometidos con prácticas que protegen el medio ambiente.</p>
+          </article>
+
+          <article class="card" id="sobre-nosotros">
+            <h3 class="card__titulo">Confianza</h3>
+            <p class="card__texto">Construimos relaciones basadas en la transparencia y la confianza.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__titulo">Personalización</h3>
+            <p class="card__texto">Ofrecemos soluciones adaptadas a las necesidades específicas de cada cliente.</p>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================== -->
+  <footer class="footer" id="contacto">
+    <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

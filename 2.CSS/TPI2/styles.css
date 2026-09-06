@@ -1,0 +1,236 @@
+/* =========================================
+   RESET
+========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   VARIABLES CSS
+========================================= */
+:root {
+  --color-header: #1e2530;
+  --color-fondo: #f4f5f7;
+  --color-panel: #ffffff;
+  --color-texto: #1e2530;
+  --color-texto-claro: #ffffff;
+  --color-muted: #4b5563;
+  --color-acento: #ff5a52;      /* el "coral" del banner */
+  --color-acento-oscuro: #1e2530;
+
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --container: 1200px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Íconos: alinear bien con el texto */
+.material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header {
+  background: var(--color-header);
+  color: var(--color-texto-claro);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  position: relative;
+}
+
+.header__logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-texto-claro);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.header__nav a:hover {
+  color: var(--color-acento);
+}
+
+/* Checkbox y botón hamburguesa: ocultos por defecto (solo aparecen en mobile) */
+.header__toggle-input {
+  display: none;
+}
+
+.header__toggle {
+  display: none;
+  cursor: pointer;
+  color: var(--color-texto-claro);
+}
+
+/* =========================================
+   BANNER / HERO
+========================================= */
+.banner {
+  background: var(--color-acento);
+  color: var(--color-texto-claro);
+  text-align: center;
+  border-radius: var(--radius);
+  padding: 60px 24px;
+  margin-top: 32px;
+}
+
+.banner__title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.banner__subtitle {
+  font-size: 18px;
+  margin-bottom: 28px;
+  opacity: 0.95;
+}
+
+.btn-descubrir {
+  background: var(--color-acento-oscuro);
+  color: var(--color-texto-claro);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-descubrir:hover {
+  opacity: 0.85;
+}
+
+/* =========================================
+   CARACTERÍSTICAS
+========================================= */
+.caracteristicas {
+  margin-top: 56px;
+  padding-bottom: 56px;
+}
+
+.caracteristicas__titulo {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.caracteristicas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columnas en desktop */
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.card__titulo {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card__texto {
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+  background: var(--color-header);
+  color: var(--color-texto-claro);
+  text-align: center;
+  padding: 24px;
+  margin-top: 32px;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE)
+========================================= */
+
+/* Tablet: 2 columnas de tarjetas */
+@media (max-width: 900px) {
+  .caracteristicas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner__title {
+    font-size: 32px;
+  }
+}
+
+/* Mobile: menú hamburguesa + 1 columna de tarjetas */
+@media (max-width: 640px) {
+  .header__toggle {
+    display: block;
+  }
+
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-header);
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+
+  /* Truco: al tildar el checkbox, mostramos el nav hermano */
+  .header__toggle-input:checked ~ .header__nav {
+    display: flex;
+  }
+
+  .caracteristicas__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner__title {
+    font-size: 26px;
+  }
+
+  .banner__subtitle {
+    font-size: 16px;
+  }
+}
