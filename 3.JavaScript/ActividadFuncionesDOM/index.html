@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TP JavaScript - Funciones, Objetos, DOM y Eventos</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #333; }
+    h1.resaltado { color: #4CAF50; }
+    section { margin-bottom: 35px; padding-bottom: 20px; border-bottom: 1px solid #ddd; }
+    ul { background: #f4f4f4; padding: 15px 30px; border-radius: 6px; }
+    input, select, button { padding: 8px; margin: 5px 0; }
+    button { cursor: pointer; }
+    #mensajeSeleccion, #mensajeFormulario { font-weight: bold; color: #4CAF50; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== PUNTO 6: Título y lista para manipular con el DOM ===== -->
+  <section>
+    <h1 id="titulo">Título original</h1>
+    <ul id="lista">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+    </ul>
+  </section>
+
+  <!-- ===== PUNTO 7 y 9 (Enter): input + botón para agregar a la lista ===== -->
+  <section>
+    <h2>Agregar elemento a la lista</h2>
+    <input type="text" id="nuevoTexto" placeholder="Escribí algo...">
+    <button id="botonAgregar">Agregar</button>
+    <p><small>Tip: también podés apretar Enter en vez de clickear el botón.</small></p>
+  </section>
+
+  <!-- ===== PUNTO 8: Formulario con submit y preventDefault ===== -->
+  <section>
+    <h2>Formulario</h2>
+    <form id="miFormulario">
+      <input type="text" id="inputFormulario" placeholder="Escribí tu nombre...">
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="mensajeFormulario"></p>
+  </section>
+
+  <!-- ===== PUNTO 9: Select con evento change ===== -->
+  <section>
+    <h2>Elegí una opción</h2>
+    <select id="miSelect">
+      <option value="">-- Elegí una opción --</option>
+      <option value="Opcion 1">Opción 1</option>
+      <option value="Opcion 2">Opción 2</option>
+      <option value="Opcion 3">Opción 3</option>
+    </select>
+    <p id="mensajeSeleccion"></p>
+  </section>
+
+  <!-- Vinculamos el archivo JS al final del body -->
+  <script src="script.js"></script>
+</body>
+</html>
