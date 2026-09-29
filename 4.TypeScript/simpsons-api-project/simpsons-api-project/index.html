@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API de los Simpsons</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+  <!-- Header: título principal y subtítulo -->
+  <header>
+    <h1>Api de los Simpsons</h1>
+    <p class="subtitulo">Descubrí personajes de la serie con sus imágenes y frases célebres</p>
+  </header>
+
+  <!-- Sección de controles -->
+  <section class="controles">
+    <button id="btnCargar">Cargar Personajes</button>
+  </section>
+
+  <!-- Sección de loading, oculta por defecto -->
+  <section id="loading" class="loading oculto">
+    <div class="spinner"></div>
+    <p>Cargando personajes...</p>
+  </section>
+
+  <!-- Div de error, oculto por defecto -->
+  <div id="error" class="error oculto"></div>
+
+  <!-- Sección donde se van a renderizar las tarjetas de personajes -->
+  <section id="contenedorPersonajes" class="contenedor-personajes"></section>
+
+  <!-- Footer -->
+  <footer>
+    <p>API: <a href="https://thesimpsonsapi.com/" target="_blank" rel="noopener noreferrer">The Simpsons Quote API</a></p>
+  </footer>
+
+  <!-- Importamos el JS ya compilado como módulo -->
+  <script type="module" src="dist/main.js"></script>
+</body>
+</html>
